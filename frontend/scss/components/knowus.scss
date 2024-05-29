@@ -1,0 +1,59 @@
+.main--container--knowus {
+    display: flex;
+    padding: var(--Numbers-Space-Space-8, 100px) var(--Numbers-Space-Space-7, 50px);
+    flex-direction: row;
+    gap: 10px;
+    align-self: stretch;
+    background: linear-gradient(90.35deg, #034903 16.81%, #008000 80.55%);
+    flex-direction: row;
+    position: relative;
+    @include mobile-screen {
+        flex-direction: column;
+        height: 1000px;
+        align-items: center;
+        justify-content: center;
+    }
+    @include tablet-screen {
+        flex-direction: column;
+        height: 1000px;
+        align-items: center;
+        justify-content: center;
+    }
+    &--words {
+        &--p2 {
+            margin-top: 20px;
+            color: #fff;
+        }
+    }
+    &--image {
+        width: 765px;
+        height: 576px;
+        float: right;
+        margin-right: -50px;
+        margin-top: -100px;
+        &img {
+            width: 765px;
+            height: 576px;
+            
+        } 
+    }
+
+}
+.landscape {
+    @include mobile-screen {
+        width: 357px;
+        height: 270px;
+        margin-top: 150px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 150px;
+    }
+    @include tablet-screen {
+        width: 357px;
+        height: 270px;
+        margin-top: 150px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 150px;
+    }
+}

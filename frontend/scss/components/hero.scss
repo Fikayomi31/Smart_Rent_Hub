@@ -1,0 +1,205 @@
+@import "../abstracts/mixins";
+
+.main--hero {
+    width: 100%;
+    height: 100vh; /* Set a height for the container, adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: crisp-edges;
+    @include mobile-screen {
+        width: 100%;
+        height: 826px;
+        background-size: cover;
+        padding: 0;
+    }
+    @include tablet-screen {
+        width: 100%;
+        height: 826px;
+        background-size: cover;
+    }
+
+    &--container {
+        display: flex;
+        padding: var(--Numbers-Space-Space-5, 36px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--Numbers-Space-Space-5, 36px);
+        border-radius: 8px;
+        background: rgba(188, 188, 188, 0.20);
+        /* glassmorphism */
+        backdrop-filter: blur(7.5px);
+        @include mobile-screen {
+           margin: 80px 20px 0px 20px;
+            width: 100%;
+            position: relative;
+                    
+        }
+        @include tablet-screen {
+            margin: 80px 20px 0px 20px;
+             width: 100%;
+             position: relative;
+                     
+         }
+        &--edge {
+            display: flex;
+            padding: 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            @include mobile-screen {
+               
+            }
+            @include tablet-screen {
+            
+             }
+            &--home {
+                @include mobile-screen {
+                    
+                }
+                @include tablet-screen {
+                    padding: 0px 30px;
+                }
+            }
+            &--look {
+                @include mobile-screen {
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+                    
+                }
+                @include tablet-screen {
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 10px;
+                    
+                }
+            }
+        }
+        &--form {
+            display: flex;
+            padding: 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            & form {
+                display: flex;
+                padding: 0px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+            }
+    
+        }
+        
+
+    }
+}
+#budget, #location, #prototype {
+    width: 265px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    background: #FAFAFA;
+    height: 45px;
+    padding: 20px;
+    position: relative;
+    @include mobile-screen {
+        width: 100%;
+        margin-top: 10px;
+    }
+    @include tablet-screen {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
+
+.image--1 {
+    position: absolute;
+    left: 530px;
+    top: 185px;
+    width: 25px;
+    height: 14px;
+    flex-shrink: 0;
+    z-index: 1;
+    @include mobile-screen {
+        left: 330px;
+        top: 350px;   
+    }
+    @include tablet-screen {
+        left: 330px;
+        top: 345px;   
+    }
+}
+.image--2 {
+    position: absolute;
+    left: 799px;
+    top: 185px;
+    width: 25px;
+    height: 14px;
+    flex-shrink: 0;
+    z-index: 1;
+    @include mobile-screen {
+        left: 330px;
+        top: 404px;
+    
+    }
+    @include tablet-screen {
+        left: 330px;
+        top: 395px;
+    
+    }
+
+}
+.mybutton {
+    display: flex;
+    height: 50px;
+    padding: var(--Numbers-Space-Space-2, 8px) 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;   
+    border-radius: 8px;
+    background: linear-gradient(90deg, #D07308 16.81%, #008000 80.55%);
+    /* shadow */
+    box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.10);
+    margin: 6px 0px 0px 220px;
+
+}
+
+.mybutton1 {
+    display: flex;
+    height: 50px;
+    padding: var(--Numbers-Space-Space-2, 8px) 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;   
+    border-radius: 8px;
+    background: linear-gradient(90.35deg, #034903 16.81%, #008000 80.55%);
+    margin: -25px 0px 0px 0px;
+    box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.1);
+    @include mobile-screen {
+        width: 88%;
+        margin-left: 20px;
+        justify-content: center;
+        align-items: center;    
+    }
+    @include tablet-screen {
+        width: 88%;
+        margin-left: 20px;
+        justify-content: center;
+        align-items: center;    
+    }
+}
