@@ -1,26 +1,18 @@
 @mixin mobile-screen {
-    @media (max-width: 480px) {
+    @media (max-width: 500px) {
         @content;
     }
 }
 
 @mixin tablet-screen {
-    @media (min-width: 481px) and (max-width: 768px) {
+    @media (min-width: 501px) and (max-width: 850px) {
         @content;
     }
 }
 
-@mixin small-screen {
-    @media (min-width: 769px) and (max-width: 1024px) {
-        @content;
-    }
-}
 
 @mixin desktop-screen {
-    @media (min-width: 1025px) {
+    @media (min-width: 851px) {
         @content;
     }
-}
-@mixin transition-ease {
-    transition: all 0.5 ease-in-out;
 }

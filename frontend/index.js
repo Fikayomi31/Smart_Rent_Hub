@@ -24,26 +24,15 @@ function validateSignup () {
      //window.location.href = 'dashboard.html';
     return 'dashboard.html'
 }
-const menuBtn = document.querySelector('.header--nav--menu');
-const hamburge = document.querySelector('.header--nav--menu--btn');
-//const nav = document.querySelector('.header--nav--div');
-//const menuNav = document.querySelector('.header--nav--ul');
 
-let showMenu = false;
+// Mobile MEnu
 
-menu.addEventListener('click', toggleMenu);
-function toggleMenu() {
-    if (!showMenu) {
-        hamburge.classList.add('open');
-        //nav.classList.add('open');
-       // menuNav.classList.add('ópen');
-        
-        showMenu = true;
-    } else {
-        hamburge.classList.remove('open');
-        //nav.classList.remove('open');
-        //menuNav.classList.remove('ópen');
-
-        showMenu = false;
-    }
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+  
+    hamburgerButton.addEventListener('click', () =>
+      mobileMenu.classList.toggle('active')
+    );
+  });
+  

@@ -12,19 +12,16 @@
     image-rendering: crisp-edges;
     @include mobile-screen {
         width: 100%;
-        height: 826px;
         background-size: cover;
         padding: 0;
     }
     @include tablet-screen {
         width: 100%;
-        height: 826px;
         background-size: cover;
     }
-
     &--container {
         display: flex;
-        padding: var(--Numbers-Space-Space-5, 36px);
+        padding: 36px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -34,18 +31,23 @@
         /* glassmorphism */
         backdrop-filter: blur(7.5px);
         @include mobile-screen {
-           margin: 80px 20px 0px 20px;
+            margin: 80px 20px 0px 20px;
             width: 100%;
             position: relative;
-                    
-        }
-        @include tablet-screen {
-            margin: 80px 20px 0px 20px;
-             width: 100%;
-             position: relative;
-                     
+            justify-content: center;
+            align-items:  center;
+            padding: 20px 40px;  
          }
-        &--edge {
+         @include tablet-screen {
+            margin: 80px 20px 0px 20px;
+            width: 100%;
+            position: relative;
+            justify-content: center;
+            align-items:  center;
+            padding: 20px 40px; 
+                      
+          }
+          &--edge {
             display: flex;
             padding: 0px;
             flex-direction: column;
@@ -53,12 +55,14 @@
             align-items: center;
             gap: 20px;
             @include mobile-screen {
+                
                
             }
             @include tablet-screen {
-            
+                padding: 30px;
              }
             &--home {
+                
                 @include mobile-screen {
                     
                 }
@@ -78,89 +82,49 @@
                     align-items: center;
                     margin-top: 10px;
                     
+                    
                 }
             }
         }
         &--form {
-            display: flex;
-            padding: 0px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            & form {
+            max-width: 100%;
+            margin: auto;
+            &--1 {
                 display: flex;
-                padding: 0px;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                position: relative;
+                flex-direction: row;
+                gap: 11px;
+                flex-wrap: wrap; /* Ensures items wrap to next line if necessary */
             }
-    
         }
-        
-
     }
 }
-#budget, #location, #prototype {
-    width: 265px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 4px;
-    border: 1px solid #808080;
-    background: #FAFAFA;
-    height: 45px;
-    padding: 20px;
+.input-container {
     position: relative;
-    @include mobile-screen {
-        width: 100%;
-        margin-top: 10px;
-    }
-    @include tablet-screen {
-        width: 100%;
-        margin-top: 10px;
-    }
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 
-}
+  .input-container input {
+    width: 310px;
+    padding: 10px;
+    margin-left: 20px;
+    height: 55px;
+    padding-right: 30px; /* Make space for the icon */
+    box-sizing: border-box;
+  }
 
-.image--1 {
+  .input-container .fa-chevron-down {
     position: absolute;
-    left: 530px;
-    top: 185px;
-    width: 25px;
-    height: 14px;
-    flex-shrink: 0;
-    z-index: 1;
-    @include mobile-screen {
-        left: 330px;
-        top: 350px;   
-    }
-    @include tablet-screen {
-        left: 330px;
-        top: 345px;   
-    }
-}
-.image--2 {
-    position: absolute;
-    left: 799px;
-    top: 185px;
-    width: 25px;
-    height: 14px;
-    flex-shrink: 0;
-    z-index: 1;
-    @include mobile-screen {
-        left: 330px;
-        top: 404px;
-    
-    }
-    @include tablet-screen {
-        left: 330px;
-        top: 395px;
-    
-    }
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333; /* Change the color as needed */
+    font-size: 30px;
+  }
 
-}
-.mybutton {
+  .mybutton1 {
     display: flex;
     height: 50px;
     padding: var(--Numbers-Space-Space-2, 8px) 150px;
@@ -170,36 +134,23 @@
     align-items: center;
     justify-content: center;   
     border-radius: 8px;
-    background: linear-gradient(90deg, #D07308 16.81%, #008000 80.55%);
-    /* shadow */
-    box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.10);
-    margin: 6px 0px 0px 220px;
-
-}
-
-.mybutton1 {
-    display: flex;
-    height: 50px;
-    padding: var(--Numbers-Space-Space-2, 8px) 150px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;   
-    border-radius: 8px;
+    border: 1px solid #008000;
     background: linear-gradient(90.35deg, #034903 16.81%, #008000 80.55%);
     margin: -25px 0px 0px 0px;
     box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.1);
     @include mobile-screen {
         width: 88%;
-        margin-left: 20px;
+        justify-items: center;
         justify-content: center;
-        align-items: center;    
+        align-items: center;  
+        margin-left: 10px;
     }
     @include tablet-screen {
         width: 88%;
-        margin-left: 20px;
+        justify-items: center;
         justify-content: center;
-        align-items: center;    
+        align-items: center;
+        margin-left: 10px;    
     }
 }
+
