@@ -1,23 +1,22 @@
 @import "../abstracts/mixins";
 
 .main--hero {
-    width: 100%;
-    height: 100vh; /* Set a height for the container, adjust as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    padding: 60px 180px;
     image-rendering: crisp-edges;
+    background-size: cover;
+    background-position: center;
+  background-repeat: no-repeat;
+
     @include mobile-screen {
+        padding: 10px;
         width: 100%;
         background-size: cover;
-        padding: 0;
+       
     }
     @include tablet-screen {
         width: 100%;
         background-size: cover;
+       
     }
     &--container {
         display: flex;
@@ -31,15 +30,15 @@
         /* glassmorphism */
         backdrop-filter: blur(7.5px);
         @include mobile-screen {
-            margin: 80px 20px 0px 20px;
+           
             width: 100%;
             position: relative;
             justify-content: center;
             align-items:  center;
-            padding: 20px 40px;  
+          
          }
          @include tablet-screen {
-            margin: 80px 20px 0px 20px;
+            
             width: 100%;
             position: relative;
             justify-content: center;
@@ -74,7 +73,8 @@
                 @include mobile-screen {
                     justify-content: center;
                     align-items: center;
-                    margin-top: 10px;
+                    
+
                     
                 }
                 @include tablet-screen {
@@ -88,28 +88,35 @@
         }
         &--form {
             max-width: 100%;
-            margin: auto;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
             &--1 {
                 display: flex;
                 flex-direction: row;
+                justify-content: center;
                 gap: 11px;
                 flex-wrap: wrap; /* Ensures items wrap to next line if necessary */
             }
         }
     }
 }
+.main--hero-container--form {
+    
+    
+}
+
 .input-container {
     position: relative;
-    align-items: center;
-    justify-items: center;
+    
     display: flex;
     flex-direction: column;
+    
   }
 
   .input-container input {
-    width: 310px;
+    width: 300px;
     padding: 10px;
-    margin-left: 20px;
     height: 55px;
     padding-right: 30px; /* Make space for the icon */
     box-sizing: border-box;
@@ -139,14 +146,16 @@
     margin: -25px 0px 0px 0px;
     box-shadow: 0px 1px 50px 0px rgba(0, 0, 0, 0.1);
     @include mobile-screen {
-        width: 88%;
+        width: 300px;
         justify-items: center;
         justify-content: center;
         align-items: center;  
-        margin-left: 10px;
+        margin-left: 20px;
+
+
     }
     @include tablet-screen {
-        width: 88%;
+        width: 300px;
         justify-items: center;
         justify-content: center;
         align-items: center;
